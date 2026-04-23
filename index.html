@@ -77,7 +77,7 @@
         Hyderabad's Premier Studio for 10H Graphene Coating, Self-Healing PPF, and Showroom Restoration.
       </p>
       <div class="hero-ctas" data-animate="fade-up" data-delay="300">
-        <a href="tel:+919493134501" class="btn btn-primary" id="hero-book-btn">
+        <a href="#booking" class="btn btn-primary" id="hero-book-btn">
           <span class="btn-glow"></span>
           Book My Transformation
         </a>
@@ -551,6 +551,72 @@
             <path d="M7 17L17 7M17 7H7M17 7V17"/>
           </svg>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BOOKING SECTION ===================== -->
+  <section id="booking" class="booking-section">
+    <div class="container">
+      <div class="booking-grid">
+        <div class="booking-content" data-animate="fade-right">
+          <span class="section-tag">SECURE YOUR SLOT</span>
+          <h2 class="section-title">BOOK YOUR<br><span class="text-red">TRANSFORMATION.</span></h2>
+          <p class="section-desc">Our studio operates on a strictly limited volume model to ensure every vehicle receives obsessive attention. Reserve your slot today.</p>
+          
+          <ul class="booking-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> Priority Scheduling</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> Free Initial Consultation</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> Instant WhatsApp Confirmation</li>
+          </ul>
+        </div>
+
+        <div class="booking-form-wrapper" data-animate="fade-left">
+          <form id="booking-form" class="booking-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="b-name">Full Name</label>
+                <input type="text" id="b-name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="b-phone">Phone Number</label>
+                <input type="tel" id="b-phone" placeholder="+91 XXXXX XXXXX" required />
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="b-vehicle">Vehicle Brand & Model</label>
+                <input type="text" id="b-vehicle" placeholder="e.g. BMW 5 Series" required />
+              </div>
+              <div class="form-group">
+                <label for="b-date">Preferred Date</label>
+                <input type="date" id="b-date" required />
+              </div>
+            </div>
+
+            <div class="form-group form-group-full">
+              <label for="b-service">Primary Service Required</label>
+              <select id="b-service" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option value="10H Graphene Coating">10H Graphene Coating</option>
+                <option value="Self-Healing PPF">Self-Healing PPF (Paint Protection Film)</option>
+                <option value="Interior Deep Spa">Interior Deep Spa</option>
+                <option value="Car Foam Wash">Premium Car Foam Wash</option>
+                <option value="Paint Correction & Buffing">Paint Correction & Buffing</option>
+                <option value="Other / General Consultation">Other / General Consultation</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span class="btn-glow"></span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.03l5.878-1.94a15.92 15.92 0 008.064 2.178h.008C24.826 31.268 32 24.09 32 16.004S24.826 0 16.004 0zm9.53 22.612c-.396 1.116-2.312 2.136-3.228 2.268-.816.12-1.848.168-2.982-.186a27.21 27.21 0 01-2.7-.996c-4.752-2.052-7.86-6.876-8.094-7.194-.234-.318-1.908-2.538-1.908-4.842s1.206-3.432 1.638-3.9c.432-.468.936-.582 1.248-.582.312 0 .624.006.9.018.288.012.672-.108 1.05.804.396.948 1.344 3.282 1.464 3.516.12.234.198.51.036.828-.162.318-.246.516-.486.792-.24.276-.504.618-.72.828-.24.234-.486.486-.21.954.276.468 1.236 2.04 2.652 3.306 1.824 1.632 3.36 2.136 3.834 2.376.468.234.744.198 1.02-.12.276-.318 1.176-1.374 1.488-1.842.312-.468.624-.39 1.056-.234.432.156 2.76 1.302 3.228 1.536.468.234.78.354.9.546.12.198.12 1.122-.276 2.238z"/>
+              </svg>
+              Confirm via WhatsApp
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </section>

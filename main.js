@@ -228,5 +228,29 @@ if (brandsMarquee) {
   });
 }
 
+// --- WhatsApp Booking Form Handling ---
+const bookingForm = document.getElementById('booking-form');
+if (bookingForm) {
+  bookingForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const name = document.getElementById('b-name').value;
+    const phone = document.getElementById('b-phone').value;
+    const vehicle = document.getElementById('b-vehicle').value;
+    const date = document.getElementById('b-date').value;
+    const service = document.getElementById('b-service').value;
+    
+    const whatsappNumber = '919493134501'; 
+    const message = `*NEW BOOKING REQUEST*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Vehicle Model:* ${vehicle}%0A*Preferred Date:* ${date}%0A*Primary Service:* ${service}%0A%0AHi MAD Auto Detailing! I would like to confirm my slot for the above service.`;
+    
+    // Redirect to WhatsApp API
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+    
+    // Optional: reset form
+    bookingForm.reset();
+  });
+}
+
 console.log('%c MAD AUTO DETAILING STUDIO ', 'background: #E60000; color: #fff; font-size: 14px; font-weight: bold; padding: 8px 16px; border-radius: 4px;');
 console.log('%c Premium Auto Detailing — Vanasthalipuram, Hyderabad ', 'color: #B0B0B0; font-size: 11px;');
