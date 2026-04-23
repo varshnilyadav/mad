@@ -931,6 +931,67 @@ body::before {
   padding: 40px;
 }
 
+/* --- COMPLETE DETAILING MENU --- */
+.services-menu {
+  margin-top: 80px;
+  background: var(--black-card);
+  border: 1px solid var(--gray-border);
+  border-radius: var(--radius);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-menu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--red);
+  box-shadow: 0 0 20px var(--red-glow);
+}
+
+.menu-title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: var(--white);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 40px;
+  list-style: none;
+}
+
+.menu-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--gray-text);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  transition: all 0.3s var(--ease);
+}
+
+.menu-list li:hover {
+  color: var(--white);
+  transform: translateX(5px);
+}
+
+.menu-list li svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--red);
+}
+
 /* ====================================================
    TRUST SECTION
    ==================================================== */
@@ -1549,6 +1610,15 @@ body::before {
   /* Services */
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .menu-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .services-menu {
+    padding: 30px 20px;
   }
 
   .service-card-featured {
