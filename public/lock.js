@@ -41,8 +41,8 @@
                 <div class="lock-tagline">Auto Detailing Studio</div>
                 
                 <div class="lock-status">
-                    <h2>Restricted Access</h2>
-                    <p>This website is temporarily restricted. Please contact admin for access credentials.</p>
+                    <h2>Website Under Construction</h2>
+                    <p>This website is still building. Access is currently restricted to authorized users only.</p>
                 </div>
 
                 <form id="lock-form" class="lock-form">
