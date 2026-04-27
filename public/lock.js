@@ -2,32 +2,34 @@
     // Configuration
     const CONFIG = {
         username: 'admin',
-        password: 'mad', // Simple password for now
-        secretKey: 'mad_access', // ?access=mad_access
+        password: 'mad',
+        secretKey: 'mad_access',
         sessionKey: 'mad_authorized'
     };
 
     // Check if already authorized
     function isAuthorized() {
-        // Check session storage
         if (sessionStorage.getItem(CONFIG.sessionKey) === 'true') return true;
-
-        // Check URL for secret key
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.get('access') === CONFIG.secretKey) {
             sessionStorage.setItem(CONFIG.sessionKey, 'true');
             return true;
         }
-
         return false;
     }
 
-    // Initialize lock
-    function init() {
-        if (isAuthorized()) return;
-
-        // Add locked class to body to prevent scrolling and hide content
+    // Immediate action: Add lock class to HTML to hide content as early as possible
+    if (!isAuthorized()) {
         document.documentElement.classList.add('locked-html');
+    } else {
+        return; // Already authorized, do nothing
+    }
+
+    // Initialize lock UI
+    function init() {
+        if (document.getElementById('access-lock-overlay')) return;
+
+        // Ensure body has the locked class
         document.body.classList.add('locked');
 
         // Create the lock overlay
@@ -71,29 +73,30 @@
 
             if (user === CONFIG.username && pass === CONFIG.password) {
                 sessionStorage.setItem(CONFIG.sessionKey, 'true');
-                // Remove overlay and locked classes
                 overlay.remove();
                 document.documentElement.classList.remove('locked-html');
                 document.body.classList.remove('locked');
             } else {
                 errorMsg.style.display = 'block';
-                // Reset password field
                 document.getElementById('lock-pass').value = '';
-                // Shake effect
                 form.classList.add('shake');
                 setTimeout(() => form.classList.remove('shake'), 500);
             }
         });
 
-        // Debug info (hidden from UI)
         console.log("Access Restricted. Admin Credentials: admin / mad");
-        console.log("Secret Link: " + window.location.origin + "/?access=mad_access");
     }
 
-    // Run as soon as possible
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
+    // Wait for body to exist to inject overlay
+    if (document.body) {
         init();
+    } else {
+        const observer = new MutationObserver((mutations, obs) => {
+            if (document.body) {
+                init();
+                obs.disconnect();
+            }
+        });
+        observer.observe(document.documentElement, { childList: true });
     }
 })();

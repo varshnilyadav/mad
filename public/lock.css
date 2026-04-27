@@ -159,6 +159,7 @@ body.locked {
     height: 100% !important;
 }
 
+html.locked-html body > *:not(#access-lock-overlay),
 body.locked > *:not(#access-lock-overlay) {
     display: none !important;
 }
