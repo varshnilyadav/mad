@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- 
+  TO REMOVE ACCESS RESTRICTION:
+  1. Change meta robots to "index, follow"
+  2. Delete/Comment out the <link> for lock.css
+  3. Delete/Comment out the <script> for lock.js
+-->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +15,8 @@
   <meta name="description" content="MAD Auto Detailing Studio — Hyderabad's premier destination for 10H Graphene Coating, Self-Healing PPF, Interior Deep Spa, and expert paint restoration. 22 years of automotive excellence in Vanasthalipuram. 4.7★ rated." />
   <meta name="keywords" content="Best Car Detailing Hyderabad, Ceramic Coating Vanasthalipuram, Graphene Coating Hyderabad, PPF Hyderabad, Auto Detailing Studio, Car Paint Protection Hyderabad, Interior Detailing Hyderabad" />
   <meta name="author" content="MAD Auto Detailing Studio" />
-  <meta name="robots" content="index, follow" />
+  <!-- ACCESS RESTRICTION: SEO BLOCKED -->
+  <meta name="robots" content="noindex, nofollow" />
   
   <!-- Open Graph -->
   <meta property="og:title" content="MAD Auto Detailing Studio | Premium Auto Detailing Hyderabad" />
@@ -26,8 +33,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Syncopate:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   
   <link rel="stylesheet" href="/style.css" />
+  
+  <!-- Access Restriction Styles -->
+  <link rel="stylesheet" href="/lock.css" />
 </head>
 <body>
+  <!-- Access Restriction Script (Runs before page content) -->
+  <script src="/lock.js"></script>
 
   <!-- ===================== NAVIGATION ===================== -->
   <nav id="main-nav" class="navbar">
