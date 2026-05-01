@@ -279,6 +279,136 @@ body::before {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* --- SERVICES MEGA DROPDOWN --- */
+.nav-dropdown-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.dropdown-chevron {
+  transition: transform 0.3s var(--ease);
+  flex-shrink: 0;
+}
+
+.nav-dropdown-parent {
+  position: relative;
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  width: 280px;
+  background: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(230, 0, 0, 0.05);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease), visibility 0.25s;
+  z-index: 2000;
+  overflow-y: auto;
+  max-height: 80vh;
+  scrollbar-width: thin;
+  scrollbar-color: var(--red-dark) transparent;
+}
+
+.nav-dropdown::-webkit-scrollbar {
+  width: 4px;
+}
+
+.nav-dropdown::-webkit-scrollbar-thumb {
+  background: var(--red-dark);
+  border-radius: 4px;
+}
+
+/* Show on hover (desktop) */
+.nav-dropdown-parent:hover .nav-dropdown,
+.nav-dropdown-parent.dropdown-open .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-parent:hover .dropdown-chevron,
+.nav-dropdown-parent.dropdown-open .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 18px;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, padding-left 0.2s;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.035);
+}
+
+a.dropdown-item:hover {
+  background: rgba(230, 0, 0, 0.1);
+  color: #fff;
+  padding-left: 24px;
+}
+
+.dropdown-parent-item {
+  cursor: default;
+  padding: 14px 18px 6px;
+  pointer-events: none;
+}
+
+.dropdown-parent-item:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.dropdown-main-label {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--white);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.dropdown-group-separator {
+  margin-top: 6px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.dropdown-sub-item {
+  padding-left: 32px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dropdown-sub-item:hover {
+  padding-left: 38px !important;
+}
+
+.sub-chevron {
+  flex-shrink: 0;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: rgba(230, 0, 0, 0.2);
+  margin: 6px 0;
+  border: none;
+}
+
 /* ====================================================
    HERO SECTION
    ==================================================== */
@@ -314,8 +444,8 @@ body::before {
   position: absolute;
   inset: 0;
   background: 
-    linear-gradient(135deg, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.7) 40%, rgba(5,5,5,0.3) 70%, rgba(5,5,5,0.6) 100%),
-    linear-gradient(to bottom, rgba(5,5,5,0.3) 0%, rgba(5,5,5,0.1) 50%, rgba(5,5,5,0.95) 100%);
+    linear-gradient(135deg, rgba(5,5,5,0.97) 0%, rgba(5,5,5,0.80) 40%, rgba(5,5,5,0.55) 65%, rgba(5,5,5,0.75) 100%),
+    linear-gradient(to bottom, rgba(5,5,5,0.50) 0%, rgba(5,5,5,0.25) 45%, rgba(5,5,5,0.97) 100%);
 }
 
 .hero-grain {
@@ -635,6 +765,65 @@ body::before {
 /* ====================================================
    BRANDS MARQUEE
    ==================================================== */
+/* --- PREMIUM BRANDS WE USE --- */
+.premium-brands-section {
+  background: var(--black);
+  border-top: 1px solid var(--gray-border);
+  border-bottom: 1px solid rgba(230, 0, 0, 0.1);
+  padding: 48px 0;
+  overflow: visible;
+}
+
+.premium-brands-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 32px;
+  padding: 0 clamp(20px, 4vw, 48px);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.premium-brand-item {
+  flex: 0 1 calc(16.66% - 32px);
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: var(--radius);
+  cursor: default;
+  transition: all 0.4s var(--ease);
+  filter: grayscale(1) opacity(0.45);
+}
+
+.premium-brand-item:hover {
+  filter: grayscale(0) opacity(1);
+  border-color: rgba(230, 0, 0, 0.25);
+  background: rgba(230, 0, 0, 0.04);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3), 0 0 20px var(--red-glow-soft);
+  transform: translateY(-4px);
+}
+
+.premium-brand-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.pb-img-logo {
+  max-width: 120px;
+  max-height: 50px;
+  object-fit: contain;
+  transition: all 0.4s var(--ease);
+}
+
+
 .brands-section {
   position: relative;
   padding: 40px 0;
@@ -1629,34 +1818,47 @@ body::before {
 }
 
 /* ====================================================
-   WHATSAPP BUTTON
+   FLOATING SOCIAL BUTTONS
    ==================================================== */
-.whatsapp-float {
+.floating-buttons {
   position: fixed;
   bottom: 28px;
   right: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 999;
+}
+
+.insta-float, .whatsapp-float {
   width: 56px;
   height: 56px;
-  background: #25D366;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   transition: all 0.3s var(--ease);
-  animation: whatsappBounce 3s infinite;
-}
-
-.whatsapp-float svg {
-  width: 28px;
-  height: 28px;
   color: var(--white);
 }
 
-.whatsapp-float:hover {
+.insta-float {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.whatsapp-float {
+  background: #25D366;
+  animation: whatsappBounce 3s infinite;
+}
+
+.insta-float svg, .whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+}
+
+.insta-float:hover, .whatsapp-float:hover {
   transform: scale(1.1) translateY(-4px);
-  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes whatsappBounce {
@@ -1664,6 +1866,70 @@ body::before {
   15% { transform: translateY(-6px); }
   30% { transform: translateY(0); }
 }
+
+/* ====================================================
+   GALLERY SECTION
+   ==================================================== */
+.gallery-section {
+  padding: var(--section-pad) 0;
+  background: var(--black-light);
+  position: relative;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--gray-border);
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(230, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+}
+
+.gallery-overlay svg {
+  width: 40px;
+  height: 40px;
+  color: var(--white);
+  transform: scale(0.8);
+  transition: transform 0.4s var(--ease);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-item:hover .gallery-overlay svg {
+  transform: scale(1);
+}
+
 
 /* ====================================================
    RESPONSIVE — MOBILE FIRST
@@ -1726,6 +1992,68 @@ body::before {
 
   .hero-slash {
     height: 60px;
+  }
+
+  /* Mobile Dropdown — tap to expand */
+  .nav-dropdown-parent:hover .nav-dropdown {
+    /* Disable hover on mobile — use JS class toggle only */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .nav-dropdown-parent.dropdown-open .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    position: static;
+    transform: none;
+    width: 100%;
+    border-radius: 8px;
+    max-height: 360px;
+    margin-top: 8px;
+    box-shadow: none;
+    background: rgba(10, 10, 10, 0.9);
+  }
+
+  .nav-dropdown-parent:hover .dropdown-chevron {
+    transform: none;
+  }
+
+  .nav-dropdown-parent.dropdown-open .dropdown-chevron {
+    transform: rotate(180deg);
+  }
+
+  .nav-dropdown-trigger {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Premium Brands mobile */
+  .premium-brands-grid {
+    gap: 14px 16px;
+  }
+
+  .premium-brand-item {
+    flex: 0 1 calc(50% - 16px);
+    min-width: 120px;
+    padding: 18px 12px;
+  }
+
+  .pb-img-logo {
+    max-width: 90px;
+    max-height: 40px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  @media (max-width: 480px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* Services */

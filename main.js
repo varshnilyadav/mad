@@ -31,12 +31,49 @@ navToggle.addEventListener('click', () => {
 });
 
 // Close mobile nav on link click
-navLinks.querySelectorAll('.nav-link').forEach(link => {
+navLinks.querySelectorAll('.nav-link:not(.nav-dropdown-trigger)').forEach(link => {
   link.addEventListener('click', () => {
     navToggle.classList.remove('active');
     navLinks.classList.remove('active');
     document.body.style.overflow = '';
   });
+});
+
+// --- Services Dropdown (Desktop: hover via CSS, Mobile: tap-to-expand) ---
+const servicesDropdownParent = document.getElementById('services-dropdown-parent');
+const servicesDropdownTrigger = document.getElementById('services-dropdown-trigger');
+
+if (servicesDropdownTrigger && servicesDropdownParent) {
+  servicesDropdownTrigger.addEventListener('click', (e) => {
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      e.stopPropagation();
+      const isOpen = servicesDropdownParent.classList.contains('dropdown-open');
+      servicesDropdownParent.classList.toggle('dropdown-open', !isOpen);
+      servicesDropdownTrigger.setAttribute('aria-expanded', String(!isOpen));
+    }
+  });
+
+  // Close dropdown when clicking dropdown items (on mobile, close whole nav)
+  document.querySelectorAll('#services-dropdown a.dropdown-item').forEach(item => {
+    item.addEventListener('click', () => {
+      servicesDropdownParent.classList.remove('dropdown-open');
+      servicesDropdownTrigger.setAttribute('aria-expanded', 'false');
+      if (window.innerWidth <= 768) {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  if (servicesDropdownParent && !servicesDropdownParent.contains(e.target)) {
+    servicesDropdownParent.classList.remove('dropdown-open');
+    if (servicesDropdownTrigger) servicesDropdownTrigger.setAttribute('aria-expanded', 'false');
+  }
 });
 
 // --- Intersection Observer for Scroll Animations ---

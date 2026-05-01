@@ -6,38 +6,45 @@
   2. Delete/Comment out the <link> for lock.css
   3. Delete/Comment out the <script> for lock.js
 -->
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- SEO Meta Tags -->
   <title>MAD Auto Detailing Studio | Best Car Detailing in Hyderabad | Ceramic Coating Vanasthalipuram</title>
-  <meta name="description" content="MAD Auto Detailing Studio — Hyderabad's premier destination for 10H Graphene Coating, Self-Healing PPF, Interior Deep Spa, and expert paint restoration. 22 years of automotive excellence in Vanasthalipuram. 4.7★ rated." />
-  <meta name="keywords" content="Best Car Detailing Hyderabad, Ceramic Coating Vanasthalipuram, Graphene Coating Hyderabad, PPF Hyderabad, Auto Detailing Studio, Car Paint Protection Hyderabad, Interior Detailing Hyderabad" />
+  <meta name="description"
+    content="MAD Auto Detailing Studio — Hyderabad's premier destination for 10H Graphene Coating, Self-Healing PPF, Interior Deep Spa, and expert paint restoration. 22 years of automotive excellence in Vanasthalipuram. 4.7★ rated." />
+  <meta name="keywords"
+    content="Best Car Detailing Hyderabad, Ceramic Coating Vanasthalipuram, Graphene Coating Hyderabad, PPF Hyderabad, Auto Detailing Studio, Car Paint Protection Hyderabad, Interior Detailing Hyderabad" />
   <meta name="author" content="MAD Auto Detailing Studio" />
   <!-- ACCESS RESTRICTION: SEO BLOCKED -->
   <meta name="robots" content="noindex, nofollow" />
-  
+
   <!-- Open Graph -->
   <meta property="og:title" content="MAD Auto Detailing Studio | Premium Auto Detailing Hyderabad" />
-  <meta property="og:description" content="22 years of automotive excellence. 10H Graphene Coating, Self-Healing PPF, and showroom restoration in Vanasthalipuram, Hyderabad." />
+  <meta property="og:description"
+    content="22 years of automotive excellence. 10H Graphene Coating, Self-Healing PPF, and showroom restoration in Vanasthalipuram, Hyderabad." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_IN" />
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Syncopate:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Michroma&family=Syncopate:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
   <link rel="stylesheet" href="/style.css" />
-  
+
   <!-- Access Restriction Styles & Script -->
   <link rel="stylesheet" href="/lock.css" />
   <script src="/lock.js"></script>
 </head>
+
 <body>
   <!-- ===================== NAVIGATION ===================== -->
   <nav id="main-nav" class="navbar">
@@ -48,13 +55,63 @@
         <span class="logo-sub">AUTO DETAILING</span>
       </a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#services" class="nav-link">Services</a></li>
+        <li class="nav-dropdown-parent" id="services-dropdown-parent">
+          <button class="nav-link nav-dropdown-trigger" id="services-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            OUR SERVICES
+            <svg class="dropdown-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown" id="services-dropdown" role="menu">
+            <!-- Ceramic Coating -->
+            <div class="dropdown-item dropdown-parent-item">
+              <span class="dropdown-main-label">Ceramic Coating</span>
+            </div>
+            <a href="#services" class="dropdown-item dropdown-sub-item" role="menuitem">
+              <svg class="sub-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E60000" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
+              Labocosmetica
+            </a>
+            <a href="#services" class="dropdown-item dropdown-sub-item" role="menuitem">
+              <svg class="sub-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E60000" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
+              Opti-Coat
+            </a>
+            <!-- PPF -->
+            <div class="dropdown-item dropdown-parent-item dropdown-group-separator">
+              <span class="dropdown-main-label">Paint Protection Film</span>
+            </div>
+            <a href="#services" class="dropdown-item dropdown-sub-item" role="menuitem">
+              <svg class="sub-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E60000" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
+              Lubrizol
+            </a>
+            <a href="#services" class="dropdown-item dropdown-sub-item" role="menuitem">
+              <svg class="sub-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E60000" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
+              Color &amp; Texture PPF
+            </a>
+            <a href="#services" class="dropdown-item dropdown-sub-item" role="menuitem">
+              <svg class="sub-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E60000" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
+              Advanced Chemistry
+            </a>
+            <a href="#services" class="dropdown-item dropdown-sub-item" role="menuitem">
+              <svg class="sub-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E60000" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
+              PPF Protection Coating
+            </a>
+            <!-- Additional Services -->
+            <div class="dropdown-divider"></div>
+            <a href="#services" class="dropdown-item" role="menuitem">Sunroof Protection Film</a>
+            <a href="#services" class="dropdown-item" role="menuitem">Window Films</a>
+            <a href="#services" class="dropdown-item" role="menuitem">Bike Detailing</a>
+            <a href="#services" class="dropdown-item" role="menuitem">Ceramic Wash</a>
+            <a href="#services" class="dropdown-item" role="menuitem">Steam Wash</a>
+            <a href="#services" class="dropdown-item" role="menuitem">Maintenance Wash</a>
+            <a href="#services" class="dropdown-item" role="menuitem">Spray-On PPF / Peelable Paint</a>
+            <a href="#services" class="dropdown-item" role="menuitem">Car Denting &amp; Painting</a>
+            <a href="#services" class="dropdown-item" role="menuitem">Windshield Protection Film</a>
+          </div>
+        </li>
         <li><a href="#trust" class="nav-link">About</a></li>
         <li><a href="#contact" class="nav-link">Location</a></li>
         <li><a href="tel:+919493134501" class="nav-cta" id="nav-call-btn">
-          <span class="cta-pulse"></span>
-          Call Now
-        </a></li>
+            <span class="cta-pulse"></span>
+            Call Now
+          </a></li>
       </ul>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -65,23 +122,24 @@
   <!-- ===================== HERO SECTION ===================== -->
   <section id="hero" class="hero-section">
     <div class="hero-bg">
-      <img src="/images/hero-car.png" alt="Luxury car with ceramic coating in MAD Auto Detailing Studio" class="hero-img" />
+      <img src="/images/ford-gt-hero.png" alt="Electric blue Ford GT with flawless ceramic coating at MAD Auto Detailing Studio"
+        class="hero-img" />
       <div class="hero-overlay"></div>
       <div class="hero-grain"></div>
     </div>
-    
+
     <!-- Diagonal slash overlay -->
     <div class="hero-slash"></div>
-    
+
     <div class="hero-content">
       <div class="hero-badge" data-animate="fade-up">
         <span class="badge-dot"></span>
         HYDERABAD'S #1 RATED STUDIO
       </div>
       <h1 class="hero-title" data-animate="fade-up" data-delay="100">
-        THE <span class="text-red">MAD</span> STANDARD:<br />
-        UNCOMPROMISED<br />
-        <span class="title-outline">PROTECTION.</span>
+        DEFY <span class="text-red">ORDINARY.</span><br />
+        DRIVE IN<br />
+        <span class="title-outline">PERFECTION.</span>
       </h1>
       <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
         Hyderabad's Premier Studio for 10H Graphene Coating, Self-Healing PPF, and Showroom Restoration.
@@ -94,7 +152,7 @@
         <a href="#services" class="btn btn-outline" id="hero-explore-btn">
           Explore Services
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+            <path d="M7 17L17 7M17 7H7M17 7V17" />
           </svg>
         </a>
       </div>
@@ -115,7 +173,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="scroll-indicator" data-animate="fade-up" data-delay="500">
       <div class="scroll-line"></div>
       <span>SCROLL</span>
@@ -129,26 +187,105 @@
     </div>
     <div class="brands-marquee-wrapper">
       <div class="brands-marquee" id="brands-marquee">
-        <div class="brand-item"><div class="brand-text-logo">HYUNDAI</div></div>
-        <div class="brand-item"><div class="brand-text-logo brand-luxury">BMW</div></div>
-        <div class="brand-item"><div class="brand-text-logo brand-luxury">MERCEDES</div></div>
-        <div class="brand-item"><div class="brand-text-logo brand-luxury">AUDI</div></div>
-        <div class="brand-item"><div class="brand-text-logo">TOYOTA</div></div>
-        <div class="brand-item"><div class="brand-text-logo">VOLKSWAGEN</div></div>
-        <div class="brand-item"><div class="brand-text-logo">HONDA</div></div>
-        <div class="brand-item"><div class="brand-text-logo">KIA</div></div>
-        <div class="brand-item"><div class="brand-text-logo">TATA</div></div>
-        <div class="brand-item"><div class="brand-text-logo">MAHINDRA</div></div>
-        <div class="brand-item"><div class="brand-text-logo brand-bold">MG</div></div>
-        <div class="brand-item"><div class="brand-text-logo">SUZUKI</div></div>
-        <div class="brand-item"><div class="brand-text-logo brand-bold">JEEP</div></div>
-        <div class="brand-item"><div class="brand-text-logo">ŠKODA</div></div>
-        <div class="brand-item"><div class="brand-text-logo">CHEVROLET</div></div>
-        <div class="brand-item"><div class="brand-text-logo">MITSUBISHI</div></div>
-        <div class="brand-item"><div class="brand-text-logo">FORD</div></div>
-        <div class="brand-item"><div class="brand-text-logo brand-luxury">LEXUS</div></div>
-        <div class="brand-item"><div class="brand-text-logo">RENAULT</div></div>
-        <div class="brand-item"><div class="brand-text-logo brand-luxury">JAGUAR</div></div>
+        <div class="brand-item">
+          <div class="brand-text-logo">HYUNDAI</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo brand-luxury">BMW</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo brand-luxury">MERCEDES</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo brand-luxury">AUDI</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo">TOYOTA</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo">VOLKSWAGEN</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo">HONDA</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo">KIA</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo">TATA</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo">MAHINDRA</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo brand-bold">MG</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo">SUZUKI</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo brand-bold">JEEP</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo">ŠKODA</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo">CHEVROLET</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo">MITSUBISHI</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo">FORD</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo brand-luxury">LEXUS</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo">RENAULT</div>
+        </div>
+        <div class="brand-item">
+          <div class="brand-text-logo brand-luxury">JAGUAR</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PREMIUM BRANDS WE USE ===================== -->
+  <section class="brands-section premium-brands-section" data-animate="fade-up">
+    <div class="brands-label">
+      <span class="section-tag">PREMIUM BRANDS WE USE</span>
+    </div>
+    <div class="premium-brands-grid">
+      <div class="premium-brand-item" title="3M">
+        <div class="premium-brand-logo">
+          <img src="/images/logo-3m.png" alt="3M" class="pb-img-logo" />
+        </div>
+      </div>
+      <div class="premium-brand-item" title="Meguiar's">
+        <div class="premium-brand-logo">
+          <img src="/images/logo-meguiars.png" alt="Meguiar's" class="pb-img-logo" />
+        </div>
+      </div>
+      <div class="premium-brand-item" title="Gtechniq">
+        <div class="premium-brand-logo">
+          <img src="/images/logo-gtechniq.png" alt="Gtechniq" class="pb-img-logo" />
+        </div>
+      </div>
+      <div class="premium-brand-item" title="Koch-Chemie">
+        <div class="premium-brand-logo">
+          <img src="/images/logo-koch-chemie.png" alt="Koch-Chemie" class="pb-img-logo" />
+        </div>
+      </div>
+      <div class="premium-brand-item" title="Labocosmetica">
+        <div class="premium-brand-logo">
+          <img src="/images/logo-labocosmetica.png" alt="Labocosmetica" class="pb-img-logo" />
+        </div>
+      </div>
+      <div class="premium-brand-item" title="Opti-Coat">
+        <div class="premium-brand-logo">
+          <img src="/images/logo-opticoat.png" alt="Opti-Coat" class="pb-img-logo" />
+        </div>
       </div>
     </div>
   </section>
@@ -156,18 +293,20 @@
   <!-- ===================== SERVICES SECTION ===================== -->
   <section id="services" class="services-section">
     <div class="section-slash section-slash-top"></div>
-    
+
     <div class="container">
       <div class="section-header" data-animate="fade-up">
         <span class="section-tag">WHAT WE DO</span>
         <h2 class="section-title">PRECISION <span class="text-red">SERVICES</span></h2>
-        <p class="section-desc">Every vehicle that enters MAD receives nothing less than obsessive, detail-driven perfection.</p>
+        <p class="section-desc">Every vehicle that enters MAD receives nothing less than obsessive, detail-driven
+          perfection.</p>
       </div>
 
       <div class="services-grid">
-        
+
         <!-- Service 1: 10H Graphene -->
-        <article class="service-card service-card-featured" id="service-graphene" data-animate="fade-up" data-delay="100">
+        <article class="service-card service-card-featured" id="service-graphene" data-animate="fade-up"
+          data-delay="100">
           <div class="card-image">
             <img src="/images/graphene-coating.png" alt="10H Graphene Ceramic Coating being applied" loading="lazy" />
             <div class="card-image-overlay"></div>
@@ -176,11 +315,12 @@
           <div class="card-content">
             <div class="card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
               </svg>
             </div>
             <h3 class="card-title">10H Graphene Coating</h3>
-            <p class="card-desc">Ultimate Diamond Hardness. Repel water, dirt, and UV rays with our advanced molecular shield.</p>
+            <p class="card-desc">Ultimate Diamond Hardness. Repel water, dirt, and UV rays with our advanced molecular
+              shield.</p>
             <div class="card-features">
               <span class="feature-tag">10H Hardness</span>
               <span class="feature-tag">UV Shield</span>
@@ -189,7 +329,7 @@
             <a href="tel:+919493134501" class="card-link">
               Get Quote
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
           </div>
@@ -204,11 +344,12 @@
           <div class="card-content">
             <div class="card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
             </div>
             <h3 class="card-title">Self-Healing PPF</h3>
-            <p class="card-desc">The Invisible Armor. Our TPU films heal scratches instantly under heat, preserving your paint for years.</p>
+            <p class="card-desc">The Invisible Armor. Our TPU films heal scratches instantly under heat, preserving your
+              paint for years.</p>
             <div class="card-features">
               <span class="feature-tag">Self-Healing</span>
               <span class="feature-tag">TPU Film</span>
@@ -217,7 +358,7 @@
             <a href="tel:+919493134501" class="card-link">
               Get Quote
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
           </div>
@@ -232,12 +373,14 @@
           <div class="card-content">
             <div class="card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
               </svg>
             </div>
             <h3 class="card-title">Interior Deep Spa</h3>
-            <p class="card-desc">Surgical Precision. Revitalizing every fiber, vent, and stitch for a factory-fresh cabin experience.</p>
+            <p class="card-desc">Surgical Precision. Revitalizing every fiber, vent, and stitch for a factory-fresh
+              cabin experience.</p>
             <div class="card-features">
               <span class="feature-tag">Steam Clean</span>
               <span class="feature-tag">Leather Care</span>
@@ -246,7 +389,7 @@
             <a href="tel:+919493134501" class="card-link">
               Get Quote
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
           </div>
@@ -261,11 +404,13 @@
           <div class="card-content">
             <div class="card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+                <path
+                  d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
               </svg>
             </div>
             <h3 class="card-title">Mechanical & Paint</h3>
-            <p class="card-desc">More than Detailing. Expert dent repair and precision painting to restore your vehicle's soul.</p>
+            <p class="card-desc">More than Detailing. Expert dent repair and precision painting to restore your
+              vehicle's soul.</p>
             <div class="card-features">
               <span class="feature-tag">Dent Repair</span>
               <span class="feature-tag">Paint Match</span>
@@ -274,79 +419,119 @@
             <a href="tel:+919493134501" class="card-link">
               Get Quote
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
           </div>
         </article>
 
       </div>
-      
+
       <!-- Complete Detailing Menu -->
       <div class="services-menu" data-animate="fade-up" data-delay="500">
         <h3 class="menu-title">COMPLETE DETAILING MENU</h3>
         <ul class="menu-list">
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             Car Foam Wash
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             Stain Removal
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             PPF (Paint Protection Film)
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             Carpet & Upholstery Cleaning
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             Ceramic / Graphene Coatings
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             Wax
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             Interior Cleaning
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             Engine Degreaser
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             Exterior Buffing
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             Wheels & Tyres
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             Vacuum & Air
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             Anti rust coating
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             Steam Cleaning
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
             Headlight restoration
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
+            Car Towing Service
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
+            General Service
           </li>
         </ul>
       </div>
 
     </div>
-    
+
     <div class="section-slash section-slash-bottom"></div>
   </section>
 
@@ -362,20 +547,20 @@
             EXCELLENCE.
           </h2>
           <p class="trust-text">
-            With a <strong>4.7-star rating</strong> and over two decades of expertise in Hyderabad, 
+            With a <strong>4.7-star rating</strong> and over two decades of expertise in Hyderabad,
             we don't just wash cars—<span class="text-red">we preserve investments</span>.
           </p>
           <p class="trust-text">
-            Every vehicle that enters MAD Auto Detailing Studio is treated with the same meticulous care 
-            as a showroom piece. From the first inspection to the final polish, our process is built on 
+            Every vehicle that enters MAD Auto Detailing Studio is treated with the same meticulous care
+            as a showroom piece. From the first inspection to the final polish, our process is built on
             precision, premium products, and an unwavering commitment to perfection.
           </p>
-          
+
           <div class="trust-metrics">
             <div class="metric" data-animate="fade-up" data-delay="100">
               <div class="metric-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 15l-3 3h6l-3-3zM12 15V3M20 21H4"/>
+                  <path d="M12 15l-3 3h6l-3-3zM12 15V3M20 21H4" />
                 </svg>
               </div>
               <div class="metric-info">
@@ -386,8 +571,8 @@
             <div class="metric" data-animate="fade-up" data-delay="200">
               <div class="metric-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                  <path d="M22 4L12 14.01l-3-3"/>
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                  <path d="M22 4L12 14.01l-3-3" />
                 </svg>
               </div>
               <div class="metric-info">
@@ -398,7 +583,7 @@
             <div class="metric" data-animate="fade-up" data-delay="300">
               <div class="metric-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
               </div>
               <div class="metric-info">
@@ -408,7 +593,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="trust-visual" data-animate="fade-left">
           <div class="trust-image-wrapper">
             <img src="/images/hero-car.png" alt="MAD Auto Detailing Studio showroom quality finish" loading="lazy" />
@@ -443,16 +628,30 @@
               <div class="reviewer-info">
                 <span class="reviewer-name">Snehith Chandra Reddy</span>
                 <span class="reviewer-time">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg>
                   1 year ago
                 </span>
               </div>
               <div class="google-badge" title="Verified Google Review">
-                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.76h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="#4285F4"
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.76h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                  <path fill="#34A853"
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05"
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335"
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
               </div>
             </div>
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"I recently had my car detailed at MAD Car Detailing Services, and I couldn't be more impressed! The team did an outstanding job, paying attention to every little detail inside and out. My car looks brand new, and they were able to remove stickers and stains I thought were permanent."</p>
+            <p class="testimonial-text">"I recently had my car detailed at MAD Car Detailing Services, and I couldn't be
+              more impressed! The team did an outstanding job, paying attention to every little detail inside and out.
+              My car looks brand new, and they were able to remove stickers and stains I thought were permanent."</p>
           </div>
 
           <!-- Review 2 -->
@@ -462,16 +661,30 @@
               <div class="reviewer-info">
                 <span class="reviewer-name">Avinash Ankala</span>
                 <span class="reviewer-time">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg>
                   1 year ago
                 </span>
               </div>
               <div class="google-badge" title="Verified Google Review">
-                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.76h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="#4285F4"
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.76h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                  <path fill="#34A853"
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05"
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335"
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
               </div>
             </div>
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"I recently had my car detailed at MAD AUTO DETAILING STUDIO, and I'm thoroughly impressed with the results. The attention to detail was impeccable, from the exterior shine to the interior cleanliness. My car looks and feels brand new again!"</p>
+            <p class="testimonial-text">"I recently had my car detailed at MAD AUTO DETAILING STUDIO, and I'm thoroughly
+              impressed with the results. The attention to detail was impeccable, from the exterior shine to the
+              interior cleanliness. My car looks and feels brand new again!"</p>
           </div>
 
           <!-- Review 3 -->
@@ -481,16 +694,29 @@
               <div class="reviewer-info">
                 <span class="reviewer-name">Vinod Chiruvella</span>
                 <span class="reviewer-time">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg>
                   1 month ago
                 </span>
               </div>
               <div class="google-badge" title="Verified Google Review">
-                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.76h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="#4285F4"
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.76h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                  <path fill="#34A853"
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05"
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335"
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
               </div>
             </div>
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"For the first time I visited MAD STUDIO two weeks ago for my Nexon. The service they gave was simply superb. Truly satisfied with the service. Simply I can say — A recommended one."</p>
+            <p class="testimonial-text">"For the first time I visited MAD STUDIO two weeks ago for my Nexon. The service
+              they gave was simply superb. Truly satisfied with the service. Simply I can say — A recommended one."</p>
           </div>
 
           <!-- Review 4 -->
@@ -500,16 +726,29 @@
               <div class="reviewer-info">
                 <span class="reviewer-name">Nitesh Thakur</span>
                 <span class="reviewer-time">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg>
                   1 month ago
                 </span>
               </div>
               <div class="google-badge" title="Verified Google Review">
-                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.76h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="#4285F4"
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.76h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                  <path fill="#34A853"
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05"
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335"
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
               </div>
             </div>
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"Best car detailing studio in Vanastalipuram. Very much satisfied with their ceramic coating and interior detailing. Highly recommended."</p>
+            <p class="testimonial-text">"Best car detailing studio in Vanastalipuram. Very much satisfied with their
+              ceramic coating and interior detailing. Highly recommended."</p>
           </div>
 
           <!-- Review 5 -->
@@ -519,16 +758,30 @@
               <div class="reviewer-info">
                 <span class="reviewer-name">Naveen Vodnala</span>
                 <span class="reviewer-time">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg>
                   1 year ago
                 </span>
               </div>
               <div class="google-badge" title="Verified Google Review">
-                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.76h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="#4285F4"
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.76h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                  <path fill="#34A853"
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05"
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335"
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
               </div>
             </div>
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"The staff was very good. The shine and cleanliness are amazing, and I can tell they used high-quality products. This was definitely worth every penny. Highly recommend MAD to anyone looking to give their car a premium treatment."</p>
+            <p class="testimonial-text">"The staff was very good. The shine and cleanliness are amazing, and I can tell
+              they used high-quality products. This was definitely worth every penny. Highly recommend MAD to anyone
+              looking to give their car a premium treatment."</p>
           </div>
 
           <!-- Review 6 -->
@@ -538,28 +791,93 @@
               <div class="reviewer-info">
                 <span class="reviewer-name">Naresh Koyya</span>
                 <span class="reviewer-time">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg>
                   2 months ago
                 </span>
               </div>
               <div class="google-badge" title="Verified Google Review">
-                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.76h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="#4285F4"
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.76h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                  <path fill="#34A853"
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05"
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335"
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
               </div>
             </div>
             <div class="testimonial-stars">★★★★★</div>
-            <p class="testimonial-text">"I would recommend this place for perfect car wash. Price worth service guaranteed."</p>
+            <p class="testimonial-text">"I would recommend this place for perfect car wash. Price worth service
+              guaranteed."</p>
           </div>
 
         </div>
       </div>
 
-      <!-- Review Link -->
-      <div class="testimonials-cta" data-animate="fade-up" data-delay="300">
-        <a href="https://www.google.com/maps/place/MAD+AUTO+DETAILING+STUDIO/@17.339919,78.5657249,17z" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="google-reviews-btn">
-          See All Reviews on Google
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INSTAGRAM GALLERY ===================== -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">OUR PORTFOLIO</span>
+        <h2 class="section-title">THE <span class="text-red">MAD</span> SHOWCASE</h2>
+        <p class="section-desc">Witness the transformation. Follow us on Instagram for daily updates and real results.</p>
+      </div>
+
+      <div class="gallery-grid" data-animate="fade-up" data-delay="200">
+        <div class="gallery-item">
+          <img src="/images/gallery-defender-black.png" alt="Black Defender Ceramic Coating" loading="lazy" />
+          <div class="gallery-overlay">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.169a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="/images/gallery-defender-ppf.png" alt="White Defender PPF" loading="lazy" />
+          <div class="gallery-overlay">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.169a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="/images/gallery-bmw-ceramic.png" alt="BMW Ceramic Coating" loading="lazy" />
+          <div class="gallery-overlay">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.169a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="/images/gallery-interior.png" alt="Interior Deep Spa" loading="lazy" />
+          <div class="gallery-overlay">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.169a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="/images/gallery-steam-wash.png" alt="Steam Wash" loading="lazy" />
+          <div class="gallery-overlay">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.169a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="/images/gallery-studio.png" alt="MAD Studio" loading="lazy" />
+          <div class="gallery-overlay">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.169a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonials-cta" style="margin-top: 40px;" data-animate="fade-up" data-delay="300">
+        <a href="https://www.instagram.com/madautodetailingstudio/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <span class="btn-glow"></span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-right: 8px;">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.169a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/>
           </svg>
+          Follow on Instagram
         </a>
       </div>
     </div>
@@ -572,12 +890,22 @@
         <div class="booking-content" data-animate="fade-right">
           <span class="section-tag">SECURE YOUR SLOT</span>
           <h2 class="section-title">BOOK YOUR<br><span class="text-red">TRANSFORMATION.</span></h2>
-          <p class="section-desc">Our studio operates on a strictly limited volume model to ensure every vehicle receives obsessive attention. Reserve your slot today.</p>
-          
+          <p class="section-desc">Our studio operates on a strictly limited volume model to ensure every vehicle
+            receives obsessive attention. Reserve your slot today.</p>
+
           <ul class="booking-features">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> Priority Scheduling</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> Free Initial Consultation</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> Instant WhatsApp Confirmation</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg> Priority Scheduling</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg> Free Initial Consultation</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                <path d="M22 4L12 14.01l-3-3" />
+              </svg> Instant WhatsApp Confirmation</li>
           </ul>
         </div>
 
@@ -593,7 +921,7 @@
                 <input type="tel" id="b-phone" placeholder="+91 XXXXX XXXXX" required />
               </div>
             </div>
-            
+
             <div class="form-row">
               <div class="form-group">
                 <label for="b-vehicle">Vehicle Brand & Model</label>
@@ -621,7 +949,8 @@
             <button type="submit" class="btn btn-primary btn-submit">
               <span class="btn-glow"></span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.03l5.878-1.94a15.92 15.92 0 008.064 2.178h.008C24.826 31.268 32 24.09 32 16.004S24.826 0 16.004 0zm9.53 22.612c-.396 1.116-2.312 2.136-3.228 2.268-.816.12-1.848.168-2.982-.186a27.21 27.21 0 01-2.7-.996c-4.752-2.052-7.86-6.876-8.094-7.194-.234-.318-1.908-2.538-1.908-4.842s1.206-3.432 1.638-3.9c.432-.468.936-.582 1.248-.582.312 0 .624.006.9.018.288.012.672-.108 1.05.804.396.948 1.344 3.282 1.464 3.516.12.234.198.51.036.828-.162.318-.246.516-.486.792-.24.276-.504.618-.72.828-.24.234-.486.486-.21.954.276.468 1.236 2.04 2.652 3.306 1.824 1.632 3.36 2.136 3.834 2.376.468.234.744.198 1.02-.12.276-.318 1.176-1.374 1.488-1.842.312-.468.624-.39 1.056-.234.432.156 2.76 1.302 3.228 1.536.468.234.78.354.9.546.12.198.12 1.122-.276 2.238z"/>
+                <path
+                  d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.03l5.878-1.94a15.92 15.92 0 008.064 2.178h.008C24.826 31.268 32 24.09 32 16.004S24.826 0 16.004 0zm9.53 22.612c-.396 1.116-2.312 2.136-3.228 2.268-.816.12-1.848.168-2.982-.186a27.21 27.21 0 01-2.7-.996c-4.752-2.052-7.86-6.876-8.094-7.194-.234-.318-1.908-2.538-1.908-4.842s1.206-3.432 1.638-3.9c.432-.468.936-.582 1.248-.582.312 0 .624.006.9.018.288.012.672-.108 1.05.804.396.948 1.344 3.282 1.464 3.516.12.234.198.51.036.828-.162.318-.246.516-.486.792-.24.276-.504.618-.72.828-.24.234-.486.486-.21.954.276.468 1.236 2.04 2.652 3.306 1.824 1.632 3.36 2.136 3.834 2.376.468.234.744.198 1.02-.12.276-.318 1.176-1.374 1.488-1.842.312-.468.624-.39 1.056-.234.432.156 2.76 1.302 3.228 1.536.468.234.78.354.9.546.12.198.12 1.122-.276 2.238z" />
               </svg>
               Confirm via WhatsApp
             </button>
@@ -642,7 +971,8 @@
       <a href="tel:+919493134501" class="btn btn-primary btn-lg" id="cta-book-btn">
         <span class="btn-glow"></span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+          <path
+            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
         </svg>
         Call +91 94931 34501
       </a>
@@ -652,10 +982,10 @@
   <!-- ===================== CONTACT / FOOTER SECTION ===================== -->
   <footer id="contact" class="footer-section">
     <div class="section-slash section-slash-top"></div>
-    
+
     <div class="container">
       <div class="footer-grid">
-        
+
         <div class="footer-info" data-animate="fade-up">
           <div class="footer-logo">
             <span class="logo-mad">MAD</span>
@@ -663,15 +993,16 @@
             <span class="logo-sub">AUTO DETAILING STUDIO</span>
           </div>
           <p class="footer-desc">
-            Hyderabad's premier automotive care destination. Where science meets artistry to deliver 
+            Hyderabad's premier automotive care destination. Where science meets artistry to deliver
             unmatched vehicle protection and restoration.
           </p>
-          
+
           <div class="footer-contact-items">
             <a href="tel:+919493134501" class="footer-contact-item" id="footer-phone">
               <div class="contact-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
                 </svg>
               </div>
               <div>
@@ -679,12 +1010,12 @@
                 <span class="contact-value">+91 94931 34501</span>
               </div>
             </a>
-            
+
             <div class="footer-contact-item">
               <div class="contact-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <circle cx="12" cy="12" r="10"/>
-                  <path d="M12 6v6l4 2"/>
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
                 </svg>
               </div>
               <div>
@@ -692,59 +1023,62 @@
                 <span class="contact-value">7:00 AM - 9:00 PM (Everyday)</span>
               </div>
             </div>
-            
+
             <div class="footer-contact-item">
               <div class="contact-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
                 </svg>
               </div>
               <div>
                 <span class="contact-label">Address</span>
-                <span class="contact-value">Plot No 21, Sainath Colony, Panama Godowns,<br />Vanasthalipuram, Hyderabad</span>
+                <span class="contact-value">Plot No 21, Sainath Colony, Panama Godowns,<br />Vanasthalipuram,
+                  Hyderabad</span>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div class="footer-map" data-animate="fade-up" data-delay="200">
           <div class="map-wrapper" id="map-container">
-            <iframe 
+            <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15234.331448842106!2d78.5683052!3d17.3399139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9f9337e62a7f%3A0x9ea16668b3f521a8!2sMAD%20AUTO%20DETAILING%20STUDIO!5e0!3m2!1sen!2sin!4v1713830000000!5m2!1sen!2sin"
-              width="100%" 
-              height="100%" 
-              style="border:0; filter: grayscale(1) invert(0.92) contrast(1.1);" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="MAD Auto Detailing Studio Location - Vanasthalipuram, Hyderabad"
-            ></iframe>
+              width="100%" height="100%" style="border:0; filter: grayscale(1) invert(0.92) contrast(1.1);"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="MAD Auto Detailing Studio Location - Vanasthalipuram, Hyderabad"></iframe>
             <div class="map-overlay-border"></div>
           </div>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <p>&copy; 2026 MAD Auto Detailing Studio. All Rights Reserved.</p>
         <p class="footer-seo">Best Car Detailing in Hyderabad | Ceramic Coating Vanasthalipuram | PPF Hyderabad</p>
-        <p class="footer-credits" style="font-size: 11px; margin-top: 8px; color: var(--gray-muted);">Designed by <span class="text-red" style="font-weight: 600;">Varshnil</span></p>
+        <p class="footer-credits" style="font-size: 11px; margin-top: 8px; color: var(--gray-muted);">Designed by <span
+            class="text-red" style="font-weight: 600;">Varshnil</span></p>
       </div>
     </div>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/919493134501?text=Hi%20MAD%20Auto%20Detailing!%20I'd%20like%20to%20know%20more%20about%20your%20services." 
-     class="whatsapp-float" 
-     id="whatsapp-btn" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 32 32" fill="currentColor">
-      <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.03l5.878-1.94a15.92 15.92 0 008.064 2.178h.008C24.826 31.268 32 24.09 32 16.004S24.826 0 16.004 0zm9.53 22.612c-.396 1.116-2.312 2.136-3.228 2.268-.816.12-1.848.168-2.982-.186a27.21 27.21 0 01-2.7-.996c-4.752-2.052-7.86-6.876-8.094-7.194-.234-.318-1.908-2.538-1.908-4.842s1.206-3.432 1.638-3.9c.432-.468.936-.582 1.248-.582.312 0 .624.006.9.018.288.012.672-.108 1.05.804.396.948 1.344 3.282 1.464 3.516.12.234.198.51.036.828-.162.318-.246.516-.486.792-.24.276-.504.618-.72.828-.24.234-.486.486-.21.954.276.468 1.236 2.04 2.652 3.306 1.824 1.632 3.36 2.136 3.834 2.376.468.234.744.198 1.02-.12.276-.318 1.176-1.374 1.488-1.842.312-.468.624-.39 1.056-.234.432.156 2.76 1.302 3.228 1.536.468.234.78.354.9.546.12.198.12 1.122-.276 2.238z"/>
-    </svg>
-  </a>
+  <!-- Floating Social Buttons -->
+  <div class="floating-buttons">
+    <a href="https://www.instagram.com/madautodetailingstudio/"
+      class="insta-float" id="insta-btn" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.169a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/>
+      </svg>
+    </a>
+    <a href="https://wa.me/919493134501?text=Hi%20MAD%20Auto%20Detailing!%20I'd%20like%20to%20know%20more%20about%20your%20services."
+      class="whatsapp-float" id="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 32 32" fill="currentColor">
+        <path
+          d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.03l5.878-1.94a15.92 15.92 0 008.064 2.178h.008C24.826 31.268 32 24.09 32 16.004S24.826 0 16.004 0zm9.53 22.612c-.396 1.116-2.312 2.136-3.228 2.268-.816.12-1.848.168-2.982-.186a27.21 27.21 0 01-2.7-.996c-4.752-2.052-7.86-6.876-8.094-7.194-.234-.318-1.908-2.538-1.908-4.842s1.206-3.432 1.638-3.9c.432-.468.936-.582 1.248-.582.312 0 .624.006.9.018.288.012.672-.108 1.05.804.396.948 1.344 3.282 1.464 3.516.12.234.198.51.036.828-.162.318-.246.516-.486.792-.24.276-.504.618-.72.828-.24.234-.486.486-.21.954.276.468 1.236 2.04 2.652 3.306 1.824 1.632 3.36 2.136 3.834 2.376.468.234.744.198 1.02-.12.276-.318 1.176-1.374 1.488-1.842.312-.468.624-.39 1.056-.234.432.156 2.76 1.302 3.228 1.536.468.234.78.354.9.546.12.198.12 1.122-.276 2.238z" />
+      </svg>
+    </a>
+  </div>
 
   <script type="module" src="/main.js"></script>
 </body>
+
 </html>
