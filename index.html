@@ -43,81 +43,12 @@
   <!-- Access Restriction Styles & Script -->
   <link rel="stylesheet" href="/lock.css" />
   <script src="/lock.js"></script>
+  <script src="/components.js" defer></script>
 </head>
 
 <body>
   <!-- ===================== NAVIGATION ===================== -->
-  <nav id="main-nav" class="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo" id="nav-logo">
-        <span class="logo-mad">MAD</span>
-        <span class="logo-divider"></span>
-        <span class="logo-sub">AUTO DETAILING</span>
-      </a>
-      <ul class="nav-links" id="nav-links">
-        <li class="nav-dropdown-parent" id="services-dropdown-parent">
-          <button class="nav-link nav-dropdown-trigger" id="services-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
-            OUR SERVICES
-            <svg class="dropdown-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="nav-dropdown" id="services-dropdown" role="menu">
-            <!-- Ceramic Coating -->
-            <div class="dropdown-item dropdown-parent-item">
-              <span class="dropdown-main-label">Ceramic Coating</span>
-            </div>
-            <a href="#services" class="dropdown-item dropdown-sub-item" role="menuitem">
-              <svg class="sub-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E60000" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
-              Labocosmetica
-            </a>
-            <a href="#services" class="dropdown-item dropdown-sub-item" role="menuitem">
-              <svg class="sub-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E60000" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
-              Opti-Coat
-            </a>
-            <!-- PPF -->
-            <div class="dropdown-item dropdown-parent-item dropdown-group-separator">
-              <span class="dropdown-main-label">Paint Protection Film</span>
-            </div>
-            <a href="#services" class="dropdown-item dropdown-sub-item" role="menuitem">
-              <svg class="sub-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E60000" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
-              Lubrizol
-            </a>
-            <a href="#services" class="dropdown-item dropdown-sub-item" role="menuitem">
-              <svg class="sub-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E60000" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
-              Color &amp; Texture PPF
-            </a>
-            <a href="#services" class="dropdown-item dropdown-sub-item" role="menuitem">
-              <svg class="sub-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E60000" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
-              Advanced Chemistry
-            </a>
-            <a href="#services" class="dropdown-item dropdown-sub-item" role="menuitem">
-              <svg class="sub-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E60000" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg>
-              PPF Protection Coating
-            </a>
-            <!-- Additional Services -->
-            <div class="dropdown-divider"></div>
-            <a href="#services" class="dropdown-item" role="menuitem">Sunroof Protection Film</a>
-            <a href="#services" class="dropdown-item" role="menuitem">Window Films</a>
-            <a href="#services" class="dropdown-item" role="menuitem">Bike Detailing</a>
-            <a href="#services" class="dropdown-item" role="menuitem">Ceramic Wash</a>
-            <a href="#services" class="dropdown-item" role="menuitem">Steam Wash</a>
-            <a href="#services" class="dropdown-item" role="menuitem">Maintenance Wash</a>
-            <a href="#services" class="dropdown-item" role="menuitem">Spray-On PPF / Peelable Paint</a>
-            <a href="#services" class="dropdown-item" role="menuitem">Car Denting &amp; Painting</a>
-            <a href="#services" class="dropdown-item" role="menuitem">Windshield Protection Film</a>
-          </div>
-        </li>
-        <li><a href="#trust" class="nav-link">About</a></li>
-        <li><a href="#contact" class="nav-link">Location</a></li>
-        <li><a href="tel:+919493134501" class="nav-cta" id="nav-call-btn">
-            <span class="cta-pulse"></span>
-            Call Now
-          </a></li>
-      </ul>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+  <mad-navbar></mad-navbar>
 
   <!-- ===================== HERO SECTION ===================== -->
   <section id="hero" class="hero-section">
@@ -256,35 +187,25 @@
     <div class="brands-label">
       <span class="section-tag">PREMIUM BRANDS WE USE</span>
     </div>
-    <div class="premium-brands-grid">
-      <div class="premium-brand-item" title="3M">
-        <div class="premium-brand-logo">
-          <img src="/images/logo-3m.png" alt="3M" class="pb-img-logo" />
+    <div class="brands-marquee-wrapper">
+      <div class="brands-marquee" id="premium-brands-marquee" style="animation-direction: reverse; animation-duration: 35s;">
+        <div class="brand-item" title="3M">
+          <div class="premium-brand-logo"><img src="/images/logo-3m.png" alt="3M" class="pb-img-logo" /></div>
         </div>
-      </div>
-      <div class="premium-brand-item" title="Meguiar's">
-        <div class="premium-brand-logo">
-          <img src="/images/logo-meguiars.png" alt="Meguiar's" class="pb-img-logo" />
+        <div class="brand-item" title="Meguiar's">
+          <div class="premium-brand-logo"><img src="/images/logo-meguiars.png" alt="Meguiar's" class="pb-img-logo" /></div>
         </div>
-      </div>
-      <div class="premium-brand-item" title="Gtechniq">
-        <div class="premium-brand-logo">
-          <img src="/images/logo-gtechniq.png" alt="Gtechniq" class="pb-img-logo" />
+        <div class="brand-item" title="Gtechniq">
+          <div class="premium-brand-logo"><img src="/images/logo-gtechniq.png" alt="Gtechniq" class="pb-img-logo" /></div>
         </div>
-      </div>
-      <div class="premium-brand-item" title="Koch-Chemie">
-        <div class="premium-brand-logo">
-          <img src="/images/logo-koch-chemie.png" alt="Koch-Chemie" class="pb-img-logo" />
+        <div class="brand-item" title="Koch-Chemie">
+          <div class="premium-brand-logo"><img src="/images/logo-koch-chemie.png" alt="Koch-Chemie" class="pb-img-logo" /></div>
         </div>
-      </div>
-      <div class="premium-brand-item" title="Labocosmetica">
-        <div class="premium-brand-logo">
-          <img src="/images/logo-labocosmetica.png" alt="Labocosmetica" class="pb-img-logo" />
+        <div class="brand-item" title="Labocosmetica">
+          <div class="premium-brand-logo"><img src="/images/logo-labocosmetica.png" alt="Labocosmetica" class="pb-img-logo" /></div>
         </div>
-      </div>
-      <div class="premium-brand-item" title="Opti-Coat">
-        <div class="premium-brand-logo">
-          <img src="/images/logo-opticoat.png" alt="Opti-Coat" class="pb-img-logo" />
+        <div class="brand-item" title="Opti-Coat">
+          <div class="premium-brand-logo"><img src="/images/logo-opticoat.png" alt="Opti-Coat" class="pb-img-logo" /></div>
         </div>
       </div>
     </div>
@@ -980,101 +901,26 @@
   </section>
 
   <!-- ===================== CONTACT / FOOTER SECTION ===================== -->
-  <footer id="contact" class="footer-section">
-    <div class="section-slash section-slash-top"></div>
+  <!-- ===================== CONTACT / FOOTER SECTION ===================== -->
+  <mad-footer></mad-footer>
 
-    <div class="container">
-      <div class="footer-grid">
-
-        <div class="footer-info" data-animate="fade-up">
-          <div class="footer-logo">
-            <span class="logo-mad">MAD</span>
-            <span class="logo-divider"></span>
-            <span class="logo-sub">AUTO DETAILING STUDIO</span>
-          </div>
-          <p class="footer-desc">
-            Hyderabad's premier automotive care destination. Where science meets artistry to deliver
-            unmatched vehicle protection and restoration.
-          </p>
-
-          <div class="footer-contact-items">
-            <a href="tel:+919493134501" class="footer-contact-item" id="footer-phone">
-              <div class="contact-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path
-                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-                </svg>
-              </div>
-              <div>
-                <span class="contact-label">Phone</span>
-                <span class="contact-value">+91 94931 34501</span>
-              </div>
-            </a>
-
-            <div class="footer-contact-item">
-              <div class="contact-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 6v6l4 2" />
-                </svg>
-              </div>
-              <div>
-                <span class="contact-label">Hours</span>
-                <span class="contact-value">7:00 AM - 9:00 PM (Everyday)</span>
-              </div>
-            </div>
-
-            <div class="footer-contact-item">
-              <div class="contact-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-              </div>
-              <div>
-                <span class="contact-label">Address</span>
-                <span class="contact-value">Plot No 21, Sainath Colony, Panama Godowns,<br />Vanasthalipuram,
-                  Hyderabad</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-map" data-animate="fade-up" data-delay="200">
-          <div class="map-wrapper" id="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15234.331448842106!2d78.5683052!3d17.3399139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9f9337e62a7f%3A0x9ea16668b3f521a8!2sMAD%20AUTO%20DETAILING%20STUDIO!5e0!3m2!1sen!2sin!4v1713830000000!5m2!1sen!2sin"
-              width="100%" height="100%" style="border:0; filter: grayscale(1) invert(0.92) contrast(1.1);"
-              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              title="MAD Auto Detailing Studio Location - Vanasthalipuram, Hyderabad"></iframe>
-            <div class="map-overlay-border"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 MAD Auto Detailing Studio. All Rights Reserved.</p>
-        <p class="footer-seo">Best Car Detailing in Hyderabad | Ceramic Coating Vanasthalipuram | PPF Hyderabad</p>
-        <p class="footer-credits" style="font-size: 11px; margin-top: 8px; color: var(--gray-muted);">Designed by <span
-            class="text-red" style="font-weight: 600;">Varshnil</span></p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Floating Social Buttons -->
-  <div class="floating-buttons">
-    <a href="https://www.instagram.com/madautodetailingstudio/"
-      class="insta-float" id="insta-btn" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram">
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.169a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/>
+  <!-- Floating Social Buttons & Book Now -->
+  <div class="floating-buttons" style="position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 9999;">
+    
+    <!-- WhatsApp -->
+    <a href="https://wa.me/919493134501?text=Hi%20MAD%20Auto%20Detailing!%20I'd%20like%20to%20know%20more%20about%20your%20services."
+      class="whatsapp-float" id="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"
+      style="width: 50px; height: 50px; background: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
+      <svg viewBox="0 0 32 32" fill="currentColor" style="width: 28px; height: 28px;">
+        <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.03l5.878-1.94a15.92 15.92 0 008.064 2.178h.008C24.826 31.268 32 24.09 32 16.004S24.826 0 16.004 0zm9.53 22.612c-.396 1.116-2.312 2.136-3.228 2.268-.816.12-1.848.168-2.982-.186a27.21 27.21 0 01-2.7-.996c-4.752-2.052-7.86-6.876-8.094-7.194-.234-.318-1.908-2.538-1.908-4.842s1.206-3.432 1.638-3.9c.432-.468.936-.582 1.248-.582.312 0 .624.006.9.018.288.012.672-.108 1.05.804.396.948 1.344 3.282 1.464 3.516.12.234.198.51.036.828-.162.318-.246.516-.486.792-.24.276-.504.618-.72.828-.24.234-.486.486-.21.954.276.468 1.236 2.04 2.652 3.306 1.824 1.632 3.36 2.136 3.834 2.376.468.234.744.198 1.02-.12.276-.318 1.176-1.374 1.488-1.842.312-.468.624-.39 1.056-.234.432.156 2.76 1.302 3.228 1.536.468.234.78.354.9.546.12.198.12 1.122-.276 2.238z" />
       </svg>
     </a>
-    <a href="https://wa.me/919493134501?text=Hi%20MAD%20Auto%20Detailing!%20I'd%20like%20to%20know%20more%20about%20your%20services."
-      class="whatsapp-float" id="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-      <svg viewBox="0 0 32 32" fill="currentColor">
-        <path
-          d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.128 6.744 3.046 9.378L1.054 31.03l5.878-1.94a15.92 15.92 0 008.064 2.178h.008C24.826 31.268 32 24.09 32 16.004S24.826 0 16.004 0zm9.53 22.612c-.396 1.116-2.312 2.136-3.228 2.268-.816.12-1.848.168-2.982-.186a27.21 27.21 0 01-2.7-.996c-4.752-2.052-7.86-6.876-8.094-7.194-.234-.318-1.908-2.538-1.908-4.842s1.206-3.432 1.638-3.9c.432-.468.936-.582 1.248-.582.312 0 .624.006.9.018.288.012.672-.108 1.05.804.396.948 1.344 3.282 1.464 3.516.12.234.198.51.036.828-.162.318-.246.516-.486.792-.24.276-.504.618-.72.828-.24.234-.486.486-.21.954.276.468 1.236 2.04 2.652 3.306 1.824 1.632 3.36 2.136 3.834 2.376.468.234.744.198 1.02-.12.276-.318 1.176-1.374 1.488-1.842.312-.468.624-.39 1.056-.234.432.156 2.76 1.302 3.228 1.536.468.234.78.354.9.546.12.198.12 1.122-.276 2.238z" />
-      </svg>
+  </div>
+
+  <!-- Sticky Book Now -->
+  <div style="position: fixed; bottom: 20px; left: 20px; z-index: 9999;">
+    <a href="/#booking" class="btn btn-primary" style="padding: 12px 24px; box-shadow: 0 10px 20px rgba(230,0,0,0.4); border-radius: 30px;">
+      Book Now
     </a>
   </div>
 

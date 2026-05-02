@@ -265,6 +265,15 @@ if (brandsMarquee) {
   });
 }
 
+const premiumBrandsMarquee = document.getElementById('premium-brands-marquee');
+if (premiumBrandsMarquee) {
+  const brands = premiumBrandsMarquee.querySelectorAll('.brand-item');
+  brands.forEach(brand => {
+    const clone = brand.cloneNode(true);
+    premiumBrandsMarquee.appendChild(clone);
+  });
+}
+
 // --- WhatsApp Booking Form Handling ---
 const bookingForm = document.getElementById('booking-form');
 if (bookingForm) {
