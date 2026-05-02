@@ -50,6 +50,20 @@ class MadNavbar extends HTMLElement {
         document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
       });
     }
+
+    // Mobile dropdown toggle
+    const dropdownTrigger = this.querySelector('#services-dropdown-trigger');
+    const dropdownParent = this.querySelector('#services-dropdown-parent');
+    
+    if (dropdownTrigger && dropdownParent) {
+      dropdownTrigger.addEventListener('click', (e) => {
+        // Only prevent default on mobile sizes to allow dropdown toggle
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          dropdownParent.classList.toggle('dropdown-open');
+        }
+      });
+    }
   }
 }
 
