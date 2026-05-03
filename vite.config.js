@@ -14,6 +14,8 @@ export default defineConfig({
         grapheneCoating: resolve(__dirname, 'services/graphene-coating/index.html'),
         mechanicalServices: resolve(__dirname, 'services/mechanical-services/index.html'),
         underbodyCoating: resolve(__dirname, 'services/underbody-coating/index.html'),
+        carTowing: resolve(__dirname, 'services/car-towing/index.html'),
+        windowTint: resolve(__dirname, 'services/window-tint/index.html'),
       }
     }
   }

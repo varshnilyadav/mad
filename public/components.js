@@ -22,6 +22,8 @@ class MadNavbar extends HTMLElement {
               <a href="/services/graphene-coating" class="dropdown-item" role="menuitem">10H Graphene Coating</a>
               <a href="/services/mechanical-services" class="dropdown-item" role="menuitem">Mechanical Services</a>
               <a href="/services/underbody-coating" class="dropdown-item" role="menuitem">Underbody Coating</a>
+              <a href="/services/car-towing" class="dropdown-item" role="menuitem">Car Towing</a>
+              <a href="/services/window-tint" class="dropdown-item" role="menuitem">Window Tint</a>
               <div class="dropdown-divider"></div>
               <a href="/services" class="dropdown-item" role="menuitem" style="color:var(--red);">View All Services &rarr;</a>
             </div>

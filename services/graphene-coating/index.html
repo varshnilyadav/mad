@@ -8,6 +8,46 @@
   <link rel="stylesheet" href="/lock.css" />
   <script src="/lock.js"></script>
   <script src="/components.js" defer></script>
+  <style>
+    .brands-used {
+      background: var(--black-card);
+      padding: 40px;
+      border-radius: 8px;
+      border: 1px solid var(--gray-border);
+      margin-bottom: 40px;
+    }
+    .brands-used h3 {
+      color: var(--white);
+      font-size: 20px;
+      margin-bottom: 24px;
+      font-family: var(--font-display);
+      letter-spacing: 1px;
+    }
+    .brands-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      background: rgba(230, 0, 0, 0.06);
+      border: 1px solid rgba(230, 0, 0, 0.2);
+      border-radius: 6px;
+      color: var(--gray-light);
+      font-family: var(--font-heading);
+      font-size: 13px;
+      letter-spacing: 1px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .brand-tag:hover {
+      border-color: var(--red);
+      color: var(--white);
+      background: rgba(230, 0, 0, 0.12);
+    }
+  </style>
 </head>
 <body>
   <mad-navbar></mad-navbar>
@@ -19,7 +59,7 @@
       <a href="/services/" style="color: var(--red); text-decoration: none; font-size: 14px; margin-bottom: 20px; display: block;">&larr; Back to Services</a>
       <h1 class="section-title" style="font-size: 48px; margin-bottom: 20px;">10H GRAPHENE COATING</h1>
       <p style="color: var(--gray-muted); font-size: 18px; line-height: 1.6; margin-bottom: 40px;">
-        Extreme hardness and heat resistance. Experience unparalleled quality and precision with our premium 10h graphene coating service at MAD Auto Detailing Studio.
+        Extreme hardness and heat resistance. Experience unparalleled quality and precision with our premium 10H graphene coating service at MAD Auto Detailing Studio.
       </p>
       
       <div style="background: var(--black-card); padding: 40px; border-radius: 8px; border: 1px solid var(--red); margin-bottom: 40px;">
@@ -30,6 +70,20 @@
           <li>Uncompromised attention to every microscopic detail.</li>
           <li>Long-lasting results and protection for your vehicle.</li>
         </ul>
+      </div>
+
+      <!-- Brands We Use for Graphene Coating -->
+      <div class="brands-used">
+        <h3>BRANDS WE USE</h3>
+        <div class="brands-tags">
+          <span class="brand-tag">Kovalent Ceramic Coating</span>
+          <span class="brand-tag">Koch Chemie</span>
+          <span class="brand-tag">3M</span>
+          <span class="brand-tag">CarPro</span>
+          <span class="brand-tag">Puris</span>
+          <span class="brand-tag">Menza Pro</span>
+          <span class="brand-tag">Meguiar's</span>
+        </div>
       </div>
 
       <div style="text-align: center;">
