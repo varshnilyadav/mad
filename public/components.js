@@ -29,6 +29,7 @@ class MadNavbar extends HTMLElement {
             </div>
           </li>
           <li><a href="/#trust" class="nav-link">About</a></li>
+          <li><a href="/#gallery" class="nav-link">Gallery</a></li>
           <li><a href="/#contact" class="nav-link">Location</a></li>
           <li><a href="tel:+919493134501" class="nav-cta" id="nav-call-btn">
               <span class="cta-pulse"></span>
