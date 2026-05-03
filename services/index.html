@@ -8,6 +8,137 @@
   <link rel="stylesheet" href="/lock.css" />
   <script src="/lock.js"></script>
   <script src="/components.js" defer></script>
+  <style>
+    .all-services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 28px;
+      margin-top: 50px;
+      padding-bottom: 60px;
+    }
+
+    .svc-card {
+      position: relative;
+      background: var(--black-card);
+      border-radius: 12px;
+      border: 1px solid var(--gray-border);
+      overflow: hidden;
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .svc-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--red);
+      box-shadow: 0 20px 50px rgba(230, 0, 0, 0.12), 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .svc-card-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .svc-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .svc-card:hover .svc-card-img img {
+      transform: scale(1.08);
+    }
+
+    .svc-card-img::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50%;
+      background: linear-gradient(to top, var(--black-card) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .svc-card-body {
+      padding: 24px 28px 28px;
+    }
+
+    .svc-card-title {
+      color: var(--white);
+      font-size: 22px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .svc-card-desc {
+      color: var(--gray-muted);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    .svc-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-heading);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--red);
+      text-decoration: none;
+      transition: gap 0.3s ease;
+      font-weight: 600;
+    }
+
+    .svc-card-link:hover {
+      gap: 14px;
+    }
+
+    .svc-card-link svg {
+      transition: transform 0.3s ease;
+    }
+
+    .svc-card-link:hover svg {
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 768px) {
+      .all-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .svc-card-body {
+        padding: 16px 18px 20px;
+      }
+
+      .svc-card-title {
+        font-size: 16px;
+      }
+
+      .svc-card-desc {
+        font-size: 13px;
+        margin-bottom: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .all-services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .svc-card-img {
+        aspect-ratio: 16 / 10;
+      }
+    }
+  </style>
 </head>
 <body>
   <mad-navbar></mad-navbar>
@@ -15,55 +146,134 @@
   <div style="padding-top: 100px; min-height: 80vh; background: var(--black);">
     <div class="container">
       
-  <div class="section-header" style="margin-top: 40px; text-align: center;">
-    <span class="section-tag">OUR EXPERTISE</span>
-    <h1 class="section-title">ALL <span class="text-red">SERVICES</span></h1>
-  </div>
-  <div class="services-grid" style="margin-top: 40px;">
-    
-      <div class="service-card" style="padding: 30px; background: var(--black-card); border-radius: 8px; border: 1px solid var(--gray-border);">
-        <h3 style="color: var(--white); font-size: 24px; margin-bottom: 10px; font-family: var(--font-display);">Car Wash</h3>
-        <p style="color: var(--gray-muted); margin-bottom: 20px;">Premium & Basic Wash options with PH-neutral soap.</p>
-        <a href="/services/car-wash/" class="btn btn-outline" style="width: 100%; text-align: center;">View Details</a>
+      <div class="section-header" style="margin-top: 40px; text-align: center;">
+        <span class="section-tag">OUR EXPERTISE</span>
+        <h1 class="section-title">ALL <span class="text-red">SERVICES</span></h1>
+        <p class="section-desc">Premium automotive care tailored to perfection. Choose a service to explore details.</p>
       </div>
-    
-      <div class="service-card" style="padding: 30px; background: var(--black-card); border-radius: 8px; border: 1px solid var(--gray-border);">
-        <h3 style="color: var(--white); font-size: 24px; margin-bottom: 10px; font-family: var(--font-display);">Car Detailing</h3>
-        <p style="color: var(--gray-muted); margin-bottom: 20px;">Comprehensive interior and exterior detailing.</p>
-        <a href="/services/car-detailing/" class="btn btn-outline" style="width: 100%; text-align: center;">View Details</a>
+
+      <div class="all-services-grid">
+
+        <!-- Car Wash -->
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="/images/service-carwash.png" alt="Car Wash Service" loading="lazy" />
+          </div>
+          <div class="svc-card-body">
+            <h3 class="svc-card-title">Car Wash</h3>
+            <p class="svc-card-desc">Premium & Basic Wash options with PH-neutral soap for a spotless, streak-free finish.</p>
+            <a href="/services/car-wash/" class="svc-card-link">
+              View Details
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Car Detailing -->
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="/images/service-detailing.png" alt="Car Detailing Service" loading="lazy" />
+          </div>
+          <div class="svc-card-body">
+            <h3 class="svc-card-title">Car Detailing</h3>
+            <p class="svc-card-desc">Comprehensive interior and exterior detailing with surgical precision and care.</p>
+            <a href="/services/car-detailing/" class="svc-card-link">
+              View Details
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Self-Healing PPF -->
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="/images/service-ppf.png" alt="Self-Healing PPF Service" loading="lazy" />
+          </div>
+          <div class="svc-card-body">
+            <h3 class="svc-card-title">Self-Healing PPF</h3>
+            <p class="svc-card-desc">5+ Years Warranty invisible protection film that heals scratches under heat.</p>
+            <a href="/services/ppf/" class="svc-card-link">
+              View Details
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Ceramic Coating -->
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="/images/service-ceramic.png" alt="Ceramic Coating Service" loading="lazy" />
+          </div>
+          <div class="svc-card-body">
+            <h3 class="svc-card-title">Ceramic Coating</h3>
+            <p class="svc-card-desc">Advanced hydrophobic protection for a lasting, mirror-like shine.</p>
+            <a href="/services/ceramic-coating/" class="svc-card-link">
+              View Details
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 10H Graphene Coating -->
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="/images/service-graphene.png" alt="10H Graphene Coating Service" loading="lazy" />
+          </div>
+          <div class="svc-card-body">
+            <h3 class="svc-card-title">10H Graphene Coating</h3>
+            <p class="svc-card-desc">Ultimate diamond hardness with extreme heat resistance and UV protection.</p>
+            <a href="/services/graphene-coating/" class="svc-card-link">
+              View Details
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mechanical Services -->
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="/images/service-mechanical.png" alt="Mechanical Services" loading="lazy" />
+          </div>
+          <div class="svc-card-body">
+            <h3 class="svc-card-title">Mechanical Services</h3>
+            <p class="svc-card-desc">Expert tuning, dent repair, and precision painting to restore your vehicle's soul.</p>
+            <a href="/services/mechanical-services/" class="svc-card-link">
+              View Details
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Underbody Coating -->
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="/images/service-underbody.png" alt="Underbody Coating Service" loading="lazy" />
+          </div>
+          <div class="svc-card-body">
+            <h3 class="svc-card-title">Underbody Coating</h3>
+            <p class="svc-card-desc">Anti-corrosion protection for the chassis to extend your vehicle's lifespan.</p>
+            <a href="/services/underbody-coating/" class="svc-card-link">
+              View Details
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
       </div>
-    
-      <div class="service-card" style="padding: 30px; background: var(--black-card); border-radius: 8px; border: 1px solid var(--gray-border);">
-        <h3 style="color: var(--white); font-size: 24px; margin-bottom: 10px; font-family: var(--font-display);">Self-Healing PPF</h3>
-        <p style="color: var(--gray-muted); margin-bottom: 20px;">5+ Years Warranty invisible protection film.</p>
-        <a href="/services/ppf/" class="btn btn-outline" style="width: 100%; text-align: center;">View Details</a>
-      </div>
-    
-      <div class="service-card" style="padding: 30px; background: var(--black-card); border-radius: 8px; border: 1px solid var(--gray-border);">
-        <h3 style="color: var(--white); font-size: 24px; margin-bottom: 10px; font-family: var(--font-display);">Ceramic Coating</h3>
-        <p style="color: var(--gray-muted); margin-bottom: 20px;">Advanced hydrophobic protection for a lasting shine.</p>
-        <a href="/services/ceramic-coating/" class="btn btn-outline" style="width: 100%; text-align: center;">View Details</a>
-      </div>
-    
-      <div class="service-card" style="padding: 30px; background: var(--black-card); border-radius: 8px; border: 1px solid var(--gray-border);">
-        <h3 style="color: var(--white); font-size: 24px; margin-bottom: 10px; font-family: var(--font-display);">10H Graphene Coating</h3>
-        <p style="color: var(--gray-muted); margin-bottom: 20px;">Extreme hardness and heat resistance.</p>
-        <a href="/services/graphene-coating/" class="btn btn-outline" style="width: 100%; text-align: center;">View Details</a>
-      </div>
-    
-      <div class="service-card" style="padding: 30px; background: var(--black-card); border-radius: 8px; border: 1px solid var(--gray-border);">
-        <h3 style="color: var(--white); font-size: 24px; margin-bottom: 10px; font-family: var(--font-display);">Mechanical Services</h3>
-        <p style="color: var(--gray-muted); margin-bottom: 20px;">Expert tuning and mechanical maintenance.</p>
-        <a href="/services/mechanical-services/" class="btn btn-outline" style="width: 100%; text-align: center;">View Details</a>
-      </div>
-    
-      <div class="service-card" style="padding: 30px; background: var(--black-card); border-radius: 8px; border: 1px solid var(--gray-border);">
-        <h3 style="color: var(--white); font-size: 24px; margin-bottom: 10px; font-family: var(--font-display);">Underbody Coating</h3>
-        <p style="color: var(--gray-muted); margin-bottom: 20px;">Anti-corrosion protection for the chassis.</p>
-        <a href="/services/underbody-coating/" class="btn btn-outline" style="width: 100%; text-align: center;">View Details</a>
-      </div>
-    
-  </div>
 
     </div>
   </div>
