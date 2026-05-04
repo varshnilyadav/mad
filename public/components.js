@@ -24,12 +24,14 @@ class MadNavbar extends HTMLElement {
               <a href="/services/underbody-coating" class="dropdown-item" role="menuitem">Underbody Coating</a>
               <a href="/services/car-towing" class="dropdown-item" role="menuitem">Car Towing</a>
               <a href="/services/window-tint" class="dropdown-item" role="menuitem">Window Tint</a>
+              <a href="/services/denting-painting" class="dropdown-item" role="menuitem">Denting & Painting</a>
               <div class="dropdown-divider"></div>
               <a href="/services" class="dropdown-item" role="menuitem" style="color:var(--red);">View All Services &rarr;</a>
             </div>
           </li>
           <li><a href="/#trust" class="nav-link">About</a></li>
           <li><a href="/#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="/membership/" class="nav-link">Membership</a></li>
           <li><a href="/#contact" class="nav-link">Location</a></li>
           <li><a href="tel:+919493134501" class="nav-cta" id="nav-call-btn">
               <span class="cta-pulse"></span>

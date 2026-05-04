@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Membership Plans | MAD Auto Detailing</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/lock.css" />
+  <script src="/lock.js"></script>
+  <script src="/components.js" defer></script>
+  <style>
+    .membership-page {
+      padding-top: 100px;
+      min-height: 100vh;
+      background: var(--black);
+    }
+
+    .membership-hero {
+      text-align: center;
+      padding: 50px 0 30px;
+    }
+
+    .membership-hero .section-tag {
+      margin-bottom: 16px;
+    }
+
+    .membership-hero p {
+      color: var(--gray-muted);
+      font-size: 17px;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ——— Pricing Tables ——— */
+    .plan-block {
+      margin-bottom: 60px;
+    }
+
+    .plan-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--gray-border);
+    }
+
+    .plan-header-icon {
+      font-size: 28px;
+    }
+
+    .plan-header h2 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      color: var(--white);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--gray-border);
+    }
+
+    .pricing-table thead th {
+      background: rgba(230, 0, 0, 0.1);
+      color: var(--white);
+      font-family: var(--font-heading);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid var(--gray-border);
+      font-weight: 600;
+    }
+
+    .pricing-table tbody tr {
+      transition: background 0.3s ease;
+    }
+
+    .pricing-table tbody tr:hover {
+      background: rgba(230, 0, 0, 0.04);
+    }
+
+    .pricing-table tbody tr:not(:last-child) td {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .pricing-table td {
+      padding: 18px 20px;
+      color: var(--gray-light);
+      font-size: 15px;
+    }
+
+    .pricing-table td:first-child {
+      color: var(--white);
+      font-weight: 600;
+      font-family: var(--font-heading);
+      letter-spacing: 0.5px;
+    }
+
+    .price-val {
+      color: var(--red);
+      font-weight: 700;
+      font-family: var(--font-heading);
+      font-size: 16px;
+    }
+
+    .save-val {
+      color: #34d399;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    /* ——— Complimentary Section ——— */
+    .complimentary-section {
+      margin-top: 20px;
+      margin-bottom: 80px;
+    }
+
+    .comp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 28px;
+    }
+
+    .comp-card {
+      background: var(--black-card);
+      border: 1px solid var(--gray-border);
+      border-radius: 12px;
+      padding: 36px;
+      transition: border-color 0.3s ease;
+    }
+
+    .comp-card:hover {
+      border-color: var(--red);
+    }
+
+    .comp-card-badge {
+      display: inline-block;
+      background: rgba(230, 0, 0, 0.12);
+      color: var(--red);
+      font-family: var(--font-heading);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .comp-card h3 {
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 20px;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .comp-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .comp-list li {
+      color: var(--gray-light);
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 8px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .comp-list li::before {
+      content: '✅';
+      font-size: 13px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .comp-list .sub-note {
+      padding-left: 32px;
+      color: var(--gray-muted);
+      font-size: 13px;
+    }
+
+    .comp-list .sub-note::before {
+      content: '•';
+      color: var(--gray-muted);
+    }
+
+    .membership-cta {
+      text-align: center;
+      padding: 40px 0 80px;
+    }
+
+    /* ——— Responsive ——— */
+    @media (max-width: 768px) {
+      .pricing-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .plan-header h2 {
+        font-size: 20px;
+      }
+
+      .comp-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <mad-navbar></mad-navbar>
+
+  <div class="membership-page">
+    <div class="container">
+
+      <!-- Hero -->
+      <div class="membership-hero">
+        <span class="section-tag">EXCLUSIVE PLANS</span>
+        <h1 class="section-title">MAD <span class="text-red">MEMBERSHIP</span></h1>
+        <p>Save big with our 6-month and 1-year wash memberships. Premium care for your vehicle, every single visit.</p>
+      </div>
+
+      <!-- ==================== BODY WASH MEMBERSHIP ==================== -->
+      <div class="plan-block">
+        <div class="plan-header">
+          <span class="plan-header-icon">🧽</span>
+          <h2>Body Wash Membership</h2>
+        </div>
+
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Vehicle Type</th>
+              <th>6 Months Package</th>
+              <th>You Save</th>
+              <th>1 Year Package</th>
+              <th>You Save</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hatchback</td>
+              <td><span class="price-val">₹7,999</span></td>
+              <td><span class="save-val">₹1,577</span></td>
+              <td><span class="price-val">₹14,999</span></td>
+              <td><span class="save-val">₹4,153</span></td>
+            </tr>
+            <tr>
+              <td>Sedan</td>
+              <td><span class="price-val">₹9,999</span></td>
+              <td><span class="save-val">₹1,977</span></td>
+              <td><span class="price-val">₹18,999</span></td>
+              <td><span class="save-val">₹4,953</span></td>
+            </tr>
+            <tr>
+              <td>SUV Type 1</td>
+              <td><span class="price-val">₹9,999</span></td>
+              <td><span class="save-val">₹1,977</span></td>
+              <td><span class="price-val">₹18,999</span></td>
+              <td><span class="save-val">₹4,953</span></td>
+            </tr>
+            <tr>
+              <td>SUV Type 2</td>
+              <td><span class="price-val">₹11,999</span></td>
+              <td><span class="save-val">₹2,377</span></td>
+              <td><span class="price-val">₹22,999</span></td>
+              <td><span class="save-val">₹5,753</span></td>
+            </tr>
+            <tr>
+              <td>Premium</td>
+              <td><span class="price-val">₹13,999</span></td>
+              <td><span class="save-val">₹2,777</span></td>
+              <td><span class="price-val">₹26,999</span></td>
+              <td><span class="save-val">₹6,553</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ==================== FULL WASH MEMBERSHIP ==================== -->
+      <div class="plan-block">
+        <div class="plan-header">
+          <span class="plan-header-icon">🚿</span>
+          <h2>Full Wash Membership</h2>
+        </div>
+
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Vehicle Type</th>
+              <th>6 Months Package</th>
+              <th>You Save</th>
+              <th>1 Year Package</th>
+              <th>You Save</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hatchback</td>
+              <td><span class="price-val">₹9,999</span></td>
+              <td><span class="save-val">₹1,977</span></td>
+              <td><span class="price-val">₹18,999</span></td>
+              <td><span class="save-val">₹4,953</span></td>
+            </tr>
+            <tr>
+              <td>Sedan</td>
+              <td><span class="price-val">₹11,999</span></td>
+              <td><span class="save-val">₹2,377</span></td>
+              <td><span class="price-val">₹22,999</span></td>
+              <td><span class="save-val">₹5,753</span></td>
+            </tr>
+            <tr>
+              <td>SUV Type 1</td>
+              <td><span class="price-val">₹11,999</span></td>
+              <td><span class="save-val">₹2,377</span></td>
+              <td><span class="price-val">₹22,999</span></td>
+              <td><span class="save-val">₹5,753</span></td>
+            </tr>
+            <tr>
+              <td>SUV Type 2</td>
+              <td><span class="price-val">₹14,999</span></td>
+              <td><span class="save-val">₹1,777</span></td>
+              <td><span class="price-val">₹27,999</span></td>
+              <td><span class="save-val">₹5,553</span></td>
+            </tr>
+            <tr>
+              <td>Premium</td>
+              <td><span class="price-val">₹16,999</span></td>
+              <td><span class="save-val">₹2,177</span></td>
+              <td><span class="price-val">₹31,999</span></td>
+              <td><span class="save-val">₹6,353</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ==================== COMPLIMENTARY SERVICES ==================== -->
+      <div class="complimentary-section">
+        <div class="plan-header">
+          <span class="plan-header-icon">🎁</span>
+          <h2>Complimentary Services</h2>
+        </div>
+
+        <div class="comp-grid">
+          <!-- Set 1 — Advanced -->
+          <div class="comp-card">
+            <span class="comp-card-badge">Set 1 — Advanced</span>
+            <h3>Full Wash Members</h3>
+            <ul class="comp-list">
+              <li>Free Interior Vacuum Every Visit</li>
+              <li>Free Engine Bay Cleaning</li>
+              <li class="sub-note">2 Times (6 Months)</li>
+              <li class="sub-note">4 Times (1 Year)</li>
+              <li>Free Glass Polish</li>
+              <li>Free Tire Dressing</li>
+              <li>Priority Booking & Fast Service</li>
+            </ul>
+          </div>
+
+          <!-- Set 2 — Standard -->
+          <div class="comp-card">
+            <span class="comp-card-badge">Set 2 — Standard</span>
+            <h3>Body Wash Members</h3>
+            <ul class="comp-list">
+              <li>Free Dashboard Polish</li>
+              <li>Free Tire Shine</li>
+              <li>Free Air Freshener</li>
+              <li>Priority Booking</li>
+              <li>Express Delivery Wash Lane</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="membership-cta">
+        <a href="/#booking" class="btn btn-primary btn-lg" style="display: inline-flex;">
+          <span class="btn-glow"></span>
+          Get Your Membership
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <mad-footer></mad-footer>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

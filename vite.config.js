@@ -16,6 +16,8 @@ export default defineConfig({
         underbodyCoating: resolve(__dirname, 'services/underbody-coating/index.html'),
         carTowing: resolve(__dirname, 'services/car-towing/index.html'),
         windowTint: resolve(__dirname, 'services/window-tint/index.html'),
+        dentingPainting: resolve(__dirname, 'services/denting-painting/index.html'),
+        membership: resolve(__dirname, 'membership/index.html'),
       }
     }
   }
